@@ -80,19 +80,27 @@ var basicCardJSON = [
  for ( i = 0 ; i < BasicCardArray.length ; i++) 
 
 inquirer.prompt ([
-	{
-	name : "front" ,
-	message: "BasicCardArray.front"
-	} ,
+	
 
 	{
 	naame : "back" ,
-	message : "BasicCardArray.back"
+	// message : "BasicCardArray.back"
 	}
 
 
-	]).then(function( f , b) {
+	]).then(function(answers) {
 
+		if (answers.back === basicCardJSON[i].back){
+			console.log("Correct!")
+			console.log( "Answer: " +answers.back)
+
+		}
+		else {
+			console.log("Incorrect");
+			console.log( "Answer: " +answers.back)
+		}
+
+		console.lgo("--------------------")
 
 })
 
